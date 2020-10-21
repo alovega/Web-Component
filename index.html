@@ -12,20 +12,6 @@
        } 
 </style>
 <template id="dialog-template">
-   <script>
-       document.getElementById('launch-dialog').addEventListener('click', () => {
-           const wrapper = document.querySelector('.wrapper');
-           const closeButton = document.querySelector('button.close');
-           const wasFocused = document.activeElement;
-
-           wrapper.classList.add('open');
-           closeButton.focus();
-           closeButton.addEventListener('click', () => {
-               wrapper.classList.remove('open');
-               wasFocused.focus();
-           });
-       });
-   </script>
    <style> 
         .wrapper {
             opacity: 0;
@@ -69,7 +55,7 @@
           font-size: 1.25rem;
           position: absolute;
                top: 1rem;
-               right:1rem;`
+               right:1rem;
       }
       button:focus {
        border: 2px solid blue;
@@ -86,5 +72,6 @@
        </div>
    </div>
 </template>
+<one-dialog></one-dialog>
 <button id="launch-dialog">Log click event</button>
 <script src="./index.js"></script>
